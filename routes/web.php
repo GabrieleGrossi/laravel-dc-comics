@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Comics\ComicController as ComicController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,4 +14,7 @@ use App\Http\Controllers\HomeController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get ('/', [ComicsController::class, 'getComics'])->name('guest.home');
+Route::get ('/', [ComicController::class, 'index']);
+Route::get ('/admin/comics', [ComicController::class, 'index']);
+
+Route::get('/admin/comics/{id}', [ComicController::class, 'show']);
