@@ -5,11 +5,8 @@
     <div class="row">
         <div class="col-12">
             <h1>
-                Welcome
+                Welcome in php Laravel
             </h1>
-            <h3>
-                Ciao
-            </h3>
         </div>
     </div>
 </div>
