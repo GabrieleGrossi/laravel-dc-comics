@@ -13,6 +13,4 @@ use App\Http\Controllers\HomeController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', [HomeController::class, 'index'])->name('welcome');
-
+Route::get ('/', [ComicsController::class, 'index'])->name('guest.home');
