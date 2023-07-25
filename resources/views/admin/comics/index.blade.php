@@ -40,5 +40,6 @@
             </table>
         </div>
     </div>
+    {!! $comicList->links() !!}
 </div>
 @endsection
