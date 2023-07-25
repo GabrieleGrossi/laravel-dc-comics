@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-12">
             <h1>
-                Welcome in php Laravel
+                DC COMICS
             </h1>
         </div>
         <div class='col-12'>
@@ -33,7 +33,7 @@
                         <img src="{{$comic->thumb}}" alt="Comic Image" class='card-img-top'>
                     </td>
                     <td>
-                        <a class="btn btn-sm btn-warning me-2">View More</a>
+                        <a class="btn btn-sm btn-warning me-2" href="{{ route('admin.comics.show', $comic->id) }}">View More</a>
                     </td>
                 </tr>
             @endforeach
