@@ -10,12 +10,14 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav w-100">
+                <img src="https://www.morrispublishing.com/images/comic-book-publishing/features-options/ComicSpread.jpg" style="width:12rem;" alt="Logo" class="d-inline-block align-text-top brand-logo me-5">
                 <a class="nav-link {{ (Route::currentRouteName() == 'home') ? 'active': ''}}" aria-current="page" href="{{ route('home') }}" >
                     Homepage
                 </a>
                 <a class="nav-link ms-auto" href="{{ route('admin.comics.create') }}">
                     Create a new comic
                 </a>
+            <a class="navbar-brand me-5" href="#">
             </div>
             </div>
         </div>
