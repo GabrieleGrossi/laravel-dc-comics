@@ -11,7 +11,8 @@
             </h1>
         </div>
         <div class="col-12">
-            <form action="">
+            <form class="col-8" action="{{route('admin.comics.store')}}" method="POST">
+            @csrf 
                 <div class="mb-3">
                     <label for="title" class="form-label">
                         Title
@@ -53,6 +54,18 @@
                         Type
                     </label>
                     <input type="text" class="form-control" id="type" name="type">
+                </div>
+                <div class="mb-3">
+                    <label for="artists" class="form-label">
+                        Artists
+                    </label>
+                    <input type="artists" class="form-control" id="artists" name="artists">
+                </div>
+                <div class="mb-3">
+                    <label for="writers" class="form-label">
+                        Writers
+                    </label>
+                    <input type="text" class="form-control" id="writers" name="writers">
                 </div>
                 <div class="col-auto">
                     <button type="submit" class="btn btn-primary mb-3">
