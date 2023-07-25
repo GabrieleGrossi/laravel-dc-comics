@@ -35,7 +35,7 @@
                         </li>
                         <li class="list-group-item">
                             Writer: 
-                           {{ $comic->writers[0] }} 
+                           {{ $comic->writers [0]}} 
                         </li>
                     </ul>
                     <a href="#" class="btn btn-primary">

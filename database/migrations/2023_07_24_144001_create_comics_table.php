@@ -24,7 +24,7 @@ return new class extends Migration
             $table->string('type', 30);
             $table->json('artists');
             $table->json('writers');
-            $table->timestamps();
+            $table->timestamps(0);
         });
     }
 
