@@ -22,6 +22,6 @@ class ComicController extends Controller
     }
     public function create()
     {
-        return 'create';
+        return view('admin.comics.create');
     }
 }
