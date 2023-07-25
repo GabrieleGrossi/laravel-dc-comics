@@ -14,8 +14,8 @@ use App\Http\Controllers\Comics\ComicController as ComicController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get ('/', [ComicController::class, 'index']);
-Route::get ('/admin/comics', [ComicController::class, 'index']);
+Route::get ('/', [ComicController::class, 'index'])->name('home');
+Route::get ('/admin/comics', [ComicController::class, 'index'])->name('admin.comics.index');
 
 Route::get('/admin/comics/create', [ComicController::class, 'create'])->name('admin.comics.create');
 Route::post('/admin/comics', [ComicController::class, 'store'])->name('admin.comics.store');
