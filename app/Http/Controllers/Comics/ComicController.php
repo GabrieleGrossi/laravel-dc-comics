@@ -9,7 +9,7 @@ class ComicController extends Controller
 {
     public function index()
     {
-        $comicList = Comic::paginate(6);
+        $comicList = Comic::all();
 
         return view('admin.comics.index', compact('comicList'));
     }
@@ -19,5 +19,9 @@ class ComicController extends Controller
             $comic = Comic::findOrFail($id);
             return view('admin.comics.show', compact('comic'));
         }
+    }
+    public function create()
+    {
+        return 'create';
     }
 }
