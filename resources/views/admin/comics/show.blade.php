@@ -8,7 +8,7 @@
         <div class="col-12">
             @if (session('update'))
                 <div class="alert alert-success">
-                   {{session ('update')}} has updated succesfully
+                   {{session ('update')}} has edit succesfully
                 </div>
             @endif
             <div class="card" style="width: 30rem;">
@@ -47,9 +47,9 @@
                     {{ $comic->price }}
                     </a>
                 </div>
-                    <button class="btn btn-warning mt-3" href="{{ route('admin.comics.edit', $comic->id) }}">
+                    <a class="btn btn-warning mt-3" href="{{ route('admin.comics.edit', $comic->id) }}">
                         Edit
-                    </button>
+                    </a>
                     <form action="{{route ('admin.comics.destroy', $comic->id)}}" method="POST" class="d-inline">
                         @csrf
                         @method('DELETE')
