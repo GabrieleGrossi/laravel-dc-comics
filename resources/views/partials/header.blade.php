@@ -2,7 +2,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <img src="https://m.media-amazon.com/images/I/712pj+kPziL._AC_UF1000,1000_QL80_.jpg" style="width:8rem;" alt="Logo" class="d-inline-block align-text-top brand-logo me-5">
-            <a class="navbar-brand me-5" href="#">
+            <a class="navbar-brand me-5 {{ (Route::currentRouteName() == 'home') ? 'active': ''}}" aria-current="page" href="{{ route('home') }}">
                 Laravel Comic
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
