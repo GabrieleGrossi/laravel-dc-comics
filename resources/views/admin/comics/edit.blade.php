@@ -69,7 +69,15 @@
             </div>
             <button type="submit" class="btn btn-warning btn-lg">
                 Edit Comic
-            </button>     
+            </button>
+            <form action="{{route ('admin.comics.destroy', $comic->id)}}" method="POST">
+                @csrf
+                @method('DELETE')
+
+                <button type="submit" class="btn btn-danger btn-lg">
+                    Delete Comic
+                </button>
+            </form>
         </form>
     </div>
 </div>
