@@ -1,4 +1,4 @@
-<header class="mb-3">
+<header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <img src="https://m.media-amazon.com/images/I/712pj+kPziL._AC_UF1000,1000_QL80_.jpg" style="width:8rem;" alt="Logo" class="d-inline-block align-text-top brand-logo me-5">
