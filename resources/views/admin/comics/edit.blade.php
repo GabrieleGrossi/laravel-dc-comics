@@ -67,16 +67,9 @@
                 </label>
                 <input type="text" class="form-control" id="writers" name="writers" value="{{$comic->writers[0]}}">
             </div>
-            <button type="submit" class="btn btn-warning btn-lg">
+            <button type="submit" class="btn btn-warning btn-lg"  href="{{ route('admin.comics.edit', $comic->id) }}">
                 Edit Comic
             </button>
-            <form action="{{route ('admin.comics.destroy', $comic->id)}}" method="POST">
-                @csrf
-                @method('DELETE')
-
-                <button type="submit" class="btn btn-danger btn-lg">
-                    Delete Comic
-                </button>
             </form>
         </form>
     </div>

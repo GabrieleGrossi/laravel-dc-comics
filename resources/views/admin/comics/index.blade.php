@@ -9,6 +9,11 @@
             </h1>
         </div>
         <div class='col-12'>
+            @if (session('delete'))
+                <div class="alert alert-warning">
+                   {{session ('delete')}} has deleted succesfully
+                </div>
+            @endif
             <table class="table table-striped table-hover text-center table-bordered">
                     <thead>
                         <tr>

@@ -6,6 +6,11 @@
 <div class="container">
     <div class="row">
         <div class="col-12">
+            @if (session('update'))
+                <div class="alert alert-success">
+                   {{session ('update')}} has updated succesfully
+                </div>
+            @endif
             <div class="card" style="width: 30rem;">
                 <img src="{{ $comic->thumb }}" class="card-img-top" alt="..." style="width: 18rem;">
                 <div class="card-body">
@@ -41,10 +46,18 @@
                     <a href="#" class="btn btn-primary">
                     {{ $comic->price }}
                     </a>
-                    <a class="btn btn-sm btn-warning me-2" href="{{ route('admin.comics.edit', $comic->id) }}">
-                        Edit
-                    </a>
                 </div>
+                    <button class="btn btn-warning mt-3" href="{{ route('admin.comics.edit', $comic->id) }}">
+                        Edit
+                    </button>
+                    <form action="{{route ('admin.comics.destroy', $comic->id)}}" method="POST" class="d-inline">
+                        @csrf
+                        @method('DELETE')
+
+                        <button type="submit" class="btn btn-danger col-12 my-3">
+                            Delete Comic
+                        </button>
+                    </form>
             </div>
         </div>
     </div>

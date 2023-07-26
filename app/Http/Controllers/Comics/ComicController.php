@@ -63,13 +63,13 @@ class ComicController extends Controller
         $comic->artists= $data['artists'];
         $comic->writers= $data['writers'];
         $comic->save();
-        return redirect ()->route('admin.comics.show', $comic->id);
+        return redirect ()->route('admin.comics.show', $comic->id)->with('update', $comic->title);;
     }
 
     public function destroy($id)
     {
         $comic = Comic::findOrFail($id);
         $comic->delete();
-        return redirect ()->route('admin.comics.index');
+        return redirect ()->route('admin.comics.index')->with('delete', $comic->title);
     }
 }
