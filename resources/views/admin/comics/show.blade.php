@@ -41,6 +41,9 @@
                     <a href="#" class="btn btn-primary">
                     {{ $comic->price }}
                     </a>
+                    <a class="btn btn-sm btn-warning me-2" href="{{ route('admin.comics.edit', $comic->id) }}">
+                        Edit
+                    </a>
                 </div>
             </div>
         </div>
