@@ -11,8 +11,8 @@
                    {{session ('update')}} has edit succesfully
                 </div>
             @endif
-            <div class="card" style="width: 30rem;">
-                <img src="{{ $comic->thumb }}" class="card-img-top" alt="..." style="width: 18rem;">
+            <div class="card" style="width: 80rem;">
+                <img src="{{ $comic->thumb }}" class="card-img-top rounded mx-auto d-block" alt="..."style="width: 20rem;">
                 <div class="card-body">
                     <h2 class="card-title">
                         {{ $comic->title }}
@@ -42,10 +42,11 @@
                             Writer: 
                            {{ $comic->writers [0]}} 
                         </li>
+                        <li class="list-group-item">
+                            Price: 
+                           {{ $comic->price}} $
+                        </li>
                     </ul>
-                    <a href="#" class="btn btn-primary">
-                    {{ $comic->price }}
-                    </a>
                 </div>
                     <a class="btn btn-warning mt-3" href="{{ route('admin.comics.edit', $comic->id) }}">
                         Edit
