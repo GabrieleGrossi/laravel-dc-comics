@@ -10,7 +10,7 @@
                 Edit Comic
             </h1>
         </div>
-        <form class="row g-3" action="{{route('admin.comics.store')}}" method="POST">
+        <form class="row g-3" action="{{route('admin.comics.update', $comic->id)}}" method="POST">
         @csrf 
         @method('PUT')
             <div class="mb-3 col-6">
